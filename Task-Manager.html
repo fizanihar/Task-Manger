@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar {
+        display: flex;
+
+
+    }
+
+    .rightnav {
+        display: flex;
+    }
+
+    .navbar {
+        display: flex;
+        position: sticky;
+        top: 0px;
+        background-color: skyblue;
+    }
+
+    .navlist {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        justify-content: space-evenly;
+        /* padding: 0px 50px; */
+        /* background-color: skyblue; */
+
+
+    }
+
+    .logo img {
+
+        width: 50px;
+        height: 50px;
+        border-radius: 20px;
+        color: white;
+    }
+
+    .logo {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        padding: 0px 50px;
+        color: whitesmoke;
+        margin: 10px;
+        padding: 0px 6px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        /* padding: 100px; */
+    }
+
+
+    .navlist a {
+        text-decoration: none;
+        /* margin: 50px 0px; */
+        color: whitesmoke;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .rightcon {
+        display: flex;
+        justify-content: space-evenly;
+        /* border: 2px solid red; */
+        width: 1200;
+        height: 600px;
+        padding: 60px;
+    }
+
+    
+
+   
+        #box1{
+        display: flex;
+        width: 350px;
+        height: 350px;
+        border: 2px solid black;
+        align-items: center;
+        flex-direction: column;
+        /* justify-content: space-between;  */
+        border-radius: 50px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        /* border: 2px solid red; */
+        color: black;
+      
+
+
+
+    }
+
+    .bigtext {
+        padding: 20px;
+    }
+
+    .button {
+        padding: 20px;
+        width: 20%;
+
+    }
+
+    .inputs {
+        padding: 10px;
+
+
+
+    }
+
+    .gul {
+        display: flex;
+        border: 2px solid pink;
+        width: 300px;
+        height: 23px;
+        margin: 10px;
+
+    }
+
+    .btn {
+        padding: 8px 18px;
+        margin: 7px 0px;
+        /* border: 2px solid white; */
+        border-radius: 8px;
+        font-size: 15px;
+        background: none;
+        cursor: pointer;
+        color: black;
+        /* color: white; */
+    }
+
+    #writetodos {
+        border: 2px solid black;
+        border-radius: 10px;
+        font-size: 15px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        /* margin-right: 200px; */
+
+    }
+
+    #box2 {
+        display: flex;
+        width: 350px;
+        height: 350px;
+        border: 2px solid rgb(0, 0, 0);
+        align-items: center;
+        flex-direction: column;
+        border-radius: 50px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color:black;
+    }
+
+    .fiza1 {
+        display: none;
+        margin-left: auto;
+        /* padding-left:20px; */
+        width: 20px;
+        height: 20px;
+    }
+
+    .container::before {
+        content: "";
+        background: url("/img/fiz.jpg") no-repeat center center/cover;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.7;
+
+    }
+
+    #navbarid::before {
+        content: "";
+        background-color: black;
+        color: white;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        top: 0px;
+        left: 0px;
+        opacity: 0.8;
+    }
+
+    .b2 {
+        padding: 6px 6px;
+        margin: 4px 0px;
+        /* border: 2px solid white; */
+        border-radius: 4px;
+        font-size: 10px;
+        background: none;
+        cursor: pointer;
+        margin: 0px 170px;
+        /* color: white; */
+        display: none;
+        color: black;
+        margin-right: auto;
+
+
+    }
+
+    #hurry {
+        /* border: 2px solid black; */
+        border-radius: 10px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        width: 300px;
+        height: 200px;
+        /* display: flex;
+       align-items: center;
+       justify-content: center; */
+        font-size: 50px;
+        color: white;
+        display: none;
+    }
+
+    #gif {
+        opacity: 0;
+        transition: opacity 2s ease-in;
+        border-radius: 50px;
+        width: 1400px;
+        height: 550px;
+
+    }
+
+    .gify {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* margin: 30px; */
+        /* border: 2px solid red; */
+        z-index: -1;
+        height: 500px;
+        width: 1300px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .todo {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: black;
+    }
+</style>
+
+<body>
+    <nav class="navbar" id="navbarid">
+
+        <div class="logo"><img src="/img/study.jpeg" alt="Loading.."><span>
+                <h1>MyStudyLife</h1>
+            </span></div>
+
+        <ul class="navlist">
+            <li class="boxli"><a href="">Home</a></li>
+            <li class="boxli"><a href="">Features</a></li>
+            <li class="boxli"><a href="">Study tips</a></li>
+            <li class="boxli"><a href="">FAQS</a></li>
+            <li class="right">
+                <button class="btn">Sign in</button>
+            </li>
+        </ul>
+
+    </nav>
+    <div class="container" id="yes">
+        <div class="gify">
+            <img src="/img/fizag.gif" alt="Loading.." id="gif">
+        </div>
+        <div class="rightcon">
+            <div id="hurry">
+            </div>
+            <div id="box1" class="imptodos">
+                <div class="bigtext">
+                    <h2>Enter Your Tasks</h2>
+                </div>
+                <div class="inputs">
+
+                    <textarea name="" id="fizag" cols="10" rows="2" placeholder="Enter Your Name"></textarea>
+                </div>
+                
+                  
+                    <div class="inputs">
+
+                        <textarea name="" id="writetodos" cols="27" rows="5" placeholder="Enter Your Tasks Here"></textarea>
+                    </div>
+                    <div class="button">
+                        <button id="submitbutton" class="btn">
+                            Enter
+                        </button>
+                    </div>
+</div>
+
+
+
+                <div id="box2">
+                    <div class="tasks">
+                        <h2> Tasks Are Here</h2>
+                    </div>
+                    <div class="gul">
+                        <span id="0" class="todo"></span><input type="checkbox" name="fiza" id="check0"
+                            class="fiza1"><button class=" b2" id="d0">Delete</button>
+                    </div>
+                    <div class="gul">
+                        <span id="1" class="todo"></span> <input type="checkbox" name="fiza" id="check1"
+                            class="fiza1"><button class=" b2" id="d1">Delete</button>
+                    </div>
+                    <div class="gul">
+                        <span id="2" class="todo"></span> <input type="checkbox" name="fiza" id="check2"
+                            class="fiza1"><button class=" b2" id="d2">Delete</button>
+                    </div>
+                    <div class="gul">
+                        <span id="3" class="todo"></span> <input type="checkbox" name="fiza" id="check3"
+                            class="fiza1"><button class="b2" id="d3">Delete</button>
+                    </div>
+                    <div class="gul">
+                        <span id="4" class="todo"></span> <input type="checkbox" name="fiza" id="check4"
+                            class="fiza1"><button class="b2" id="d4">Delete</button>
+                    </div>
+                    <div class="gul">
+                        <span id="5" class="todo"></span> <input type="checkbox" name="fiza" id="check5"
+                            class="fiza1"><button class="b2" id="d5">Delete</button>
+                    </div>
+                    <div class="gul">
+                        <span id="6" class="todo"></span> <input type="checkbox" name="fiza" id="check6"
+                            class="fiza1"><button class="b2" id="d6">Delete</button>
+                    </div>
+
+                </div>
+            
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let submit1 = document.getElementById('submitbutton');
+                let todoes = Array.from(document.getElementsByClassName("todo"));
+                let checkboxes1 = Array.from(document.getElementsByClassName("fiza1"));
+                let dlt = document.querySelectorAll(".b2");
+                let box1 = document.getElementById("box1");
+                let box2 = document.getElementById("box2");
+                let gif = document.getElementById("gif");
+                let index = 0;
+    
+                submit1.addEventListener('click', function () {
+                    var inputValue = document.getElementById('writetodos').value;
+    
+                    if (index < todoes.length) {
+                        console.log('Submitted value:', inputValue);
+                        document.getElementById(`${index}`).textContent = inputValue;
+                        checkboxes1[index].style.display = "block";
+                        index += 1;
+                        document.getElementById('writetodos').value = "";
+                    }
+                });
+    
+                let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                let hurry = document.getElementById('hurry');
+    
+                checkboxes.forEach(function(checkbox, index) {
+                    checkbox.addEventListener('change', function() {
+                        var deleteButton = document.getElementById(`d${index}`);
+    
+                        if (this.checked) {
+                            setTimeout(function() {
+                                checkbox.style.display = 'none';
+                                deleteButton.style.display = 'block';
+                            }, 10000);
+                        } else {
+                            checkbox.style.display = 'block';
+                            deleteButton.style.display = 'none';
+                        }
+    
+                        let allChecked = true;
+                        checkboxes.forEach(function(cb) {
+                            if (!cb.checked) {
+                                allChecked = false;
+                            }
+                        });
+    
+                        if (allChecked) {
+                            let name = document.getElementById('fizag').value;
+                            hurry.style.display = 'block';
+                            hurry.textContent = name + " You have completed All the Tasks";
+                            gif.style.opacity = 0.5;
+                        }
+                    });
+                });
+    
+                dlt.forEach(function (element, index) {
+                    element.addEventListener('click', function () {
+                        gif.style.opacity = 0;
+                        hurry.style.display = "none";
+                        let spanElement = document.getElementById(`${index}`);
+                        spanElement.innerText = "";
+                        checkboxes1[index].style.display = "none";
+                        this.style.display = "none";
+                    });
+                });
+            });
+        </script>
+  
+</body>
+
+</html>
